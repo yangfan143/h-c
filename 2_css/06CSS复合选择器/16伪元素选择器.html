@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div::first-letter{
+            color: blue; font-size: 20px;
+        }
+        div::first-line{
+            background-color:aqua;
+        }
+        div::selection{
+            color:blueviolet; font-size:10px;
+        }
+        input::placeholder{
+            color:skyblue; 
+        }
+        p::before{
+            content:"￥"
+        }
+        p::after{
+            content:".00"
+        }
+    </style>
+</head>
+<body>
+    <div>Des yeux qui font baisser les miens Un rire qui se perd sur sa bouche Voilà le portrait sans retouche De l'homme auquel j'appartiens</div>
+    <input type="text" placeholder="请输入用户名">
+    <p>100</p>
+    <p>200</p>
+    <p>300</p>
+    <p>400</p>
+</body>
+</html>

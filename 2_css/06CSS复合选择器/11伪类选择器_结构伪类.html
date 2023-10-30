@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 了解 */
+        /* 选中div中所有儿子倒数第几个 */
+        div>p:nth-last-child(3){
+            color: khaki;
+        }
+        /* 选中div中所有儿子p倒数第几个 */
+        div>p:nth-last-of-type(3){
+            color: rgb(140, 225, 240);
+        }
+        /* 选中独生子 */
+        .fs>span:only-child{
+            color:red;
+        }
+        .fs>span:only-of-type{
+            color:rgb(0, 255, 85);
+        }
+        :root{
+            background-color: gray;
+        }
+        div:empty{width:100px;height: 100px;
+            color:aqua;background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <span>测试1</span>
+        <p>张三：98分</p>
+        <p>李四：58分</p>
+        <p>王五：95分</p>
+        <p>赵六：56分</p>
+        <p>孙七：68分</p>
+        <p>老八：42分</p>
+        <span>测试2</span>
+
+    </div>
+    <div class="fs">
+        <span>测试1</span>
+        <span>测试1</span>
+        </div>
+    <div class="fs">
+        <span>测试2</span>
+        <p>张三：98分</p>
+        <p>李四：58分</p>
+        <p>王五：95分</p>
+        <p>赵六：56分</p>
+        <p>孙七：68分</p>
+        <p>老八：42分</p>
+    </div>
+    <div></div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 与div紧紧相邻的下行兄弟 */
+        div+p{
+            color:red
+        }
+        /* 通用兄弟选择器 */
+        div~p {
+            color:skyblue;
+        }
+        li+li{
+            color:coral;
+        }
+    </style>
+</head>
+<body>
+    <div>guigu</div>
+    <p>front-end</p>
+    <p>java</p>
+    <p>bigdata</p>
+    <p>UI</p>
+    <ul>
+        <li>主页</li>
+        <li>秒杀</li>
+        <li>订单</li>
+        <li>我的</li>
+    </ul>
+</body>
+</html>
