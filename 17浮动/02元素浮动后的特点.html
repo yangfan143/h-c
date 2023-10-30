@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 1.元素浮动后脱离文档流 
+        2.浮动后默认宽高被内容撑开，可设置宽高
+        3.不独占一行
+        4.不和margin合并，不塌陷
+        5.没有行内块的空白问题*/
+        .outer{
+            width: 800px;
+            height: 400px;
+            background-color: gray;
+            padding: 10px;
+            text-align: center;
+        }
+        .box{
+            font-size: 20px;
+            padding: 10px;
+        }
+        .box1{
+            background-color: aqua       
+        }
+        .box2{
+           background-color: orange ;
+           float: left;
+        }
+        .box3{
+           background-color: green;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <div class="box box1">盒子1</div>
+        <div class="box box2">盒子2</div>
+        <div class="box box3">盒子3</div>
+        
+    </div>
+</body>
+</html>

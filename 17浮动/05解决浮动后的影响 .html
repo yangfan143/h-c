@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer {
+            width: 600px;
+            background-color: gray;
+            border: 1px solid black;
+            /* 父元素塌陷，解决方法1设置父亲高度 计算麻烦不治本*/
+            /* height:122px */
+            /* 解决方法2float父亲 叔叔上位*/
+            /* float: left; */
+            /* 解决3 丢了兄弟*/
+            /* overflow: hidden; */
+
+        }
+
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: skyblue;
+            border: 1px solid black;
+            margin: 10px;
+        }
+
+        .box1,
+        .box2,
+        .box3{
+            float: left;
+        }
+
+        /* 解决4 添加空白块元素*/
+
+        /* .magic {
+            clear: both;
+           不能浮动，得是块元素，不能有行内元素，否则不能控制宽高 
+        } */
+        /* 解决5*/
+        .outer::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outer">
+
+        <div class="box box1">1</div>
+        <div class="box box2">2</div>
+        <div class="box box3">3</div>
+        <div class="box box4">4</div>
+        <div class="magic"></div>
+    </div>
+    <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi necessitatibus in eveniet numquam eligendi
+        delectus sequi id? Necessitatibus in autem eligendi animi dolorem. Delectus impedit eligendi optio neque
+        praesentium iste laborum, fuga sit libero accusantium aperiam deserunt asperiores, cupiditate, aut voluptatum.
+        Iusto inventore atque, adipisci odit minima neque eius aspernatur delectus quis nobis, quo magni unde dolorum
+        consectetur incidunt saepe modi vero eligendi suscipit aut nihil molestias, sit molestiae cumque! Ab asperiores
+        placeat alias laudantium eius distinctio delectus perspiciatis animi nisi? Rem maiores placeat minima, nostrum
+        repellendus amet fuga quidem inventore, doloremque, odio excepturi harum ea eveniet libero. Nostrum, nam?</div>
+</body>
+
+</html>
