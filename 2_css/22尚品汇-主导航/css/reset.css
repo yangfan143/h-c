@@ -1,0 +1,11 @@
+.leftfix{
+    float: left;
+}
+.rightfix{
+    float:right;
+}
+.clraefix{
+    content: "";
+    display:block;
+    clear:both;
+}
