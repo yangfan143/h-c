@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .box {
+      height: 200px;
+      width: 250px;
+      border: 1px solid #000;
+      float: left;
+      margin-left: 50px;
+    }
+
+    /* 纯色区域重复线性渐变 */
+    .box1 {
+      background-image: repeating-linear-gradient(red 50px, yellow 100px, green 150px);
+      font-size: 80px;
+      line-height: 200px;
+      background-clip: text;
+    }
+
+    .box2 {
+      background-image: repeating-linear-gradient(20deg, red 50px, yellow 100px, green 150px);
+      text-align: center;
+      line-height: 200px;
+      font-size: 80px;
+      font-weight: bold;
+      color: transparent;
+      -webkit-background-clip: text;
+    }
+
+    /* 纯色区域重复径向渐变 */
+    .box6 {
+      background-image: repeating-radial-gradient(red 20px, yellow 100px, green 150px);
+    }
+
+    .box7 {
+      background-image: repeating-radial-gradient(100px 50px at 130px 150px, red 20px, yellow 100px, green 150px);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box box1">5</div>
+  <div class="box box2">你好啊</div>
+  <div class="box box6">6调整径向渐变区域</div>
+  <div class="box box7">7混合</div>
+</body>
+
+</html>

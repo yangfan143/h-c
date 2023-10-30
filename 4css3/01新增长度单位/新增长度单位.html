@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    .box1 {
+      height: 200px;
+      width: 200px;
+      background-color: aqua;
+    }
+
+    .box2 {
+      /* vw视口宽度占比%vh高度占比 */
+      height: 50vw;
+      width: 20vw;
+      background-color: aquamarine;
+    }
+
+    .box3 {
+      height: 50vmax;
+      width: 20vmin;
+      background-color: aquamarine;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="box1">像素</div>
+  <div class="box2">vw和vh</div>
+  <div class="box3">vmax和vmin</div>
+
+</body>
+
+</html>
